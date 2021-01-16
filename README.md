@@ -10,21 +10,21 @@ This extension is in pre-release, with a feature list still work in progress.
 
 Currently, I'm thinking of the following features:
 
-[ ] Set whole document to `direction: rtl;`.
+- [ ] Set whole document to `direction: rtl;`.
 
-[ ] Move the minimap to the left.
+- [ ] Move the minimap to the left.
 
-[ ] RTL layout for the editor using the above.
+- [ ] RTL layout for the editor using the above.
 
-[ ] Per line RTL settings
+- [ ] Per line RTL settings
 
-[ ] Per line alignment to right (still unsure how to implement this in practice - in terms of the desired UX).
+- [ ] Per line alignment to right (still unsure how to implement this in practice - in terms of the desired UX).
 
-[ ] Dedicated context menu for the different RTL and alignment settings.
+- [ ] Dedicated context menu for the different RTL and alignment settings.
 
-[ ] Workspace settings to remember chosen RTL / alignment layouts for files / lines in files.
+- [ ] Workspace settings to remember chosen RTL / alignment layouts for files / lines in files.
 
-[ ] Comment format to define rtl / alignment blocks in code (?)
+- [ ] Comment format to define rtl / alignment blocks in code (?)
 
 ## CSS snippets for the planned features
 
