@@ -56,6 +56,8 @@ Currently, I'm thinking of the following features:
 ## Issues to track in VSCode
 
 - [Support for RTL languages #11770](https://github.com/microsoft/vscode/issues/11770)
+- [Support for RTL languages (such as Arabic / Hebrew / Persian etc.) #86667](https://github.com/microsoft/vscode/issues/86667)
+- [[rtl] Add Right-to-Left editing #4994](https://github.com/microsoft/vscode/issues/4994)
 
 <!--
 Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
