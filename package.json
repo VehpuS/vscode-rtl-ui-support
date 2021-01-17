@@ -1,17 +1,26 @@
 {
   "name": "rtl-ui-support",
+  "publisher": "VehpuS",
   "displayName": "RTL UI Support",
   "description": "Add VSCode support for RTL",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.52.0"
   },
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/VehpuS/vscode-rtl-ui-support"
+	},
   "categories": [
     "Other"
   ],
   "activationEvents": [
     "onCommand:rtl-ui-support.showCSSPlans"
   ],
+  "extensionDependencies": [
+		"iocave.monkey-patch"
+  ],
+  "extensionKind": ["ui"],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -19,7 +28,28 @@
         "command": "rtl-ui-support.showCSSPlans",
         "title": "Show CSS Plans"
       }
-    ]
+    ],
+    "colors": [
+			{
+				"id": "inlineTitleBar.background",
+				"description": "Color for inline titlebar background",
+				"defaults": {
+					"dark": "sideBar.background",
+					"light": "sideBar.background",
+					"highContrast": "sideBar.background"
+				}
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "RTL Layout",
+			"properties": {
+				"customizeUI.stylesheet": {
+					"type": "object",
+					"markdownDescription": "Additional stylesheet definitions.\n```\n{\n  \".monaco-workbench .window-title\" :\n     \"font-size: 12px !important\"\n}\n```\n"
+				}
+			}
+		}
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

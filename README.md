@@ -1,7 +1,5 @@
 # VSCode RTL UI Support
 
-<!-- This is the README for your extension "rtl-ui-support". After writing up a brief description, we recommend including the following sections. -->
-
 This extension aims to add support for writing / viewing in right to left mode within VSCode - both per line or per file, with and without document / line alignments.
 
 ## Planned Features
@@ -26,10 +24,13 @@ Currently, I'm thinking of the following features:
 
 - [ ] Comment format to define rtl / alignment blocks in code (?)
 
-## Caveats
-- It turns out VSCode [outright disallows making changes to the editor's DOM](https://code.visualstudio.com/api/extension-capabilities/overview#no-dom-access)
+## Known Issues
+- It turns out VSCode [officially disallows making changes to the editor's DOM](https://code.visualstudio.com/api/extension-capabilities/overview#no-dom-access)
 - However, [as noted in the RTL issue in vscode's repo](https://github.com/microsoft/vscode/issues/11770#issuecomment-737441166), there is some work done to overcome this using the [Monkey Patch extension](https://github.com/iocave/monkey-patch).
     - [Sample extension using the monkey patch extension](https://github.com/iocave/customize-ui).
+
+- I tried setting the extension to depend on the monkey-patch plugin to run some custom code that's supposed to load custom RTL styles (following the examples from the [sample extension using the monkey patch extension](https://github.com/iocave/customize-ui)) but currently this is causing VSCode to enter into an unusable state. To fix this, I had to access VSCode's global storage directly and clear the extension's storage. On my mac, this was the command to do this:
+```rm -rf /Users/**my-user**/Library/Application\ Support/Code/User/globalStorage/vehpus.rtl-ui-support```
 
 ## CSS snippets for the planned features
 
@@ -58,6 +59,10 @@ Currently, I'm thinking of the following features:
 - [Support for RTL languages #11770](https://github.com/microsoft/vscode/issues/11770)
 - [Support for RTL languages (such as Arabic / Hebrew / Persian etc.) #86667](https://github.com/microsoft/vscode/issues/86667)
 - [[rtl] Add Right-to-Left editing #4994](https://github.com/microsoft/vscode/issues/4994)
+
+## Additional Notes
+- To compile this package, run: ```vsce package```. [More info can be found here](https://code.visualstudio.com/api/working-with-extensions/publishing-extension).
+  - This is useful as it allows loading the .vsix package directly, which seems to respond better to the monkey-patch extension (though as mentioned above, this was still unsuccessful).
 
 <!--
 Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
