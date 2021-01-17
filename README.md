@@ -1,12 +1,3 @@
-# CANCELED - it turns out VSCode [outright disallows making changes to the editor's DOM](https://code.visualstudio.com/api/extension-capabilities/overview#no-dom-access) :(
-
-
-
-
-----------
-
-
-
 # VSCode RTL UI Support
 
 <!-- This is the README for your extension "rtl-ui-support". After writing up a brief description, we recommend including the following sections. -->
@@ -34,6 +25,11 @@ Currently, I'm thinking of the following features:
 - [ ] Workspace settings to remember chosen RTL / alignment layouts for files / lines in files.
 
 - [ ] Comment format to define rtl / alignment blocks in code (?)
+
+## Caveats
+- It turns out VSCode [outright disallows making changes to the editor's DOM](https://code.visualstudio.com/api/extension-capabilities/overview#no-dom-access)
+- However, [as noted in the RTL issue in vscode's repo](https://github.com/microsoft/vscode/issues/11770#issuecomment-737441166), there is some work done to overcome this using the [Monkey Patch extension](https://github.com/iocave/monkey-patch).
+    - [Sample extension using the monkey patch extension](https://github.com/iocave/customize-ui).
 
 ## CSS snippets for the planned features
 
