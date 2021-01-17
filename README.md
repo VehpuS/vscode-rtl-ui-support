@@ -1,3 +1,12 @@
+# CANCELED - it turns out VSCode [outright disallows making changes to the editor's DOM](https://code.visualstudio.com/api/extension-capabilities/overview#no-dom-access) :(
+
+
+
+
+----------
+
+
+
 # VSCode RTL UI Support
 
 <!-- This is the README for your extension "rtl-ui-support". After writing up a brief description, we recommend including the following sections. -->
